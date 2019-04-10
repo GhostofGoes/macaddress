@@ -1,0 +1,5 @@
+tox>=3.4
+pytest
+pytest-randomly
+pytest-mock
+pytest-cov
