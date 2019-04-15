@@ -35,6 +35,9 @@ setup(
         'ethernet', 'mac-48', 'networking', 'network',
         'networking', 'layer2', 'layer-2', '802.3'
     ],
+    install_requires=[
+        'getmac',
+    ],
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Environment :: Console',
