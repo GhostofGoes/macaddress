@@ -9,7 +9,7 @@ to bring new members into the community, and can always use the help.
 
 
 # Code requirements
-* Must work under all supported Python versions (2.7 and 3.4+)
+* Must work under all supported Python versions (3.6+)
 * Must work on all supported platforms (if applicable)
 * Try to match the general code style (loosely PEP8)
 * Be respectful. Memes, references, and jokes are ok. Explicit language
@@ -31,36 +31,9 @@ to bring new members into the community, and can always use the help.
 # Where to contribute
 
 ## Good for beginners
-* Sample collection (see section below)
-* Platform testing (see section below)
 * Bug reports!
 * Documentation (including fixes for grammar and spelling)
-* Improving and adding tests for existing samples
-
-## Main areas of focus
-* Writing parsers for new commands (Example: `netsh int ipv6`)
-* Addressing missing functionality (Example: default interface detection for IPv6 on Windows)
-* Adding new features (Example: ability to find MAC by interface index integer)
-* Adding tests for internal methods and mocking where necessary
-
-## Platform testing
-Help is dearly needed on testing and rooting out differences in various platforms and configurations.
-At a basic level, this involves just running the tests on any platforms you use.
-Open issues for any bugs or quirks you discover, or if you're feeling adventerous, fix it yourself!
-
-Any platform is fair game! The following are some highlights or platforms of special interest:
-* MacOS/OSX (This requires owning a Mac, and is the area most sorely in need of testing)
-* Legacy Windows desktop (7 and 8)
-* Windows Server
-* Arch Linux
-* BSD
-
-## Sample collection
-Examples of output of various commands is an easy way contribute that is still incredibly helpful.
-1. Run the command
-2. Copy/paste the output (or redirect output of command, `tee` is helpful here) into an appropriately named `.out` file in `samples/`
-3. That's it!
-
+* Improving and adding tests (e.g. to improve coverage)
 
 # Getting started
 1. Create your own fork of the code through GitHub web interface ([Here's a Guide](https://gist.github.com/Chaser324/ce0505fbed06b947d962))
@@ -73,9 +46,7 @@ Again, this can be done using the GUI, your favorite editor, or `git checkout -b
 4. Install the developer tools, package, and pre-commit hooks:
     ```bash
     python -m pip install --user -U tox
-    python -m pip install --user -U pre-commit
     python -m pip install -e .
-    pre-commit install
     ```
 5. Setup and run the tests:
     ```bash
@@ -95,7 +66,7 @@ and if it's relevant, the rationale (thinking) for the change.
 Filing a bug report:
 
 1. Answer these questions:
-    * [ ] What version of `macaddress` are you using? (`macaddress --version`)
+    * [ ] What version of `macaddress` are you using? (`pip list | grep macaddress`)
     * [ ] What operating system and processor architecture are you using?
     * [ ] What version of Python are you using?
     * [ ] What did you do?
