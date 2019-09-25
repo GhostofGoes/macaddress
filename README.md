@@ -1,3 +1,7 @@
+[![Coverage Status](https://coveralls.io/repos/github/GhostofGoes/macaddress/badge.svg?branch=master)](https://coveralls.io/github/GhostofGoes/macaddress?branch=master)
+[![Travis CI build status](https://travis-ci.org/GhostofGoes/macaddress.svg?branch=master)](https://travis-ci.org/GhostofGoes/macaddress)
+[![Appveyor build status](https://ci.appveyor.com/api/projects/status/4o9mx4d35adrbssq/branch/master?svg=true)](https://ci.appveyor.com/project/GhostofGoes/macaddress)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
 
 **WORK IN PROGRESS - NOT YET STABLE**
 

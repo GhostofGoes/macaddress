@@ -59,7 +59,7 @@ from typing import Union, Optional
 
 from getmac import get_mac_address
 
-log = logging.getLogger('macaddress')
+log = logging.getLogger("macaddress")
 log.addHandler(logging.NullHandler())
 
 
@@ -71,6 +71,7 @@ class MacAddressException(Exception):
 @total_ordering
 class MacAddress:
     """Object representing a MAC address."""
+
     def __init__(self, mac_address: Optional[str] = None):
         # TODO: logging
 
@@ -112,38 +113,46 @@ class MacAddress:
         # Validate base length
         if len(mac) != 17:
             raise MacAddressException(
-                f"Invalid length {len(mac)}for MAC address string {mac}")
+                f"Invalid length {len(mac)}for MAC address string {mac}"
+            )
 
         # Remove separator characters
-        mac = mac.replace(':', '').replace('.', '').replace('-', '')
+        mac = mac.replace(":", "").replace(".", "").replace("-", "")
 
         # Validate unseparated length
         if len(mac) != 12:
             raise MacAddressException(
                 f"Invalid length {len(mac)} for "
-                f"unseparated MAC address string {mac}")
+                f"unseparated MAC address string {mac}"
+            )
 
         # Convert to integer value as a hexadecimal number
         try:
             int_mac = int(mac, 16)
         except ValueError:
             raise MacAddressException(
-                f"Failed to convert MAC address string {mac} to an integer")
+                f"Failed to convert MAC address string {mac} to an integer"
+            )
 
         # Validate address range
-        if 0 <= int_mac <= 0xffffffffffff:
+        if 0 <= int_mac <= 0xFFFFFFFFFFFF:
             return int_mac
         else:
             raise MacAddressException(
-                f"MAC address {mac} is outside of the valid integer range")
+                f"MAC address {mac} is outside of the valid integer range"
+            )
 
     @classmethod
-    def get_mac_address(cls, interface=None, ip=None, ip6=None,
-                        hostname=None, network_request=True
-                        ) -> Optional[object]:
+    def get_mac_address(
+        cls, interface=None, ip=None, ip6=None, hostname=None, network_request=True
+    ) -> Optional[object]:
         mac = get_mac_address(
-            interface=interface, ip=ip, ip6=ip6,
-            hostname=hostname, network_request=network_request)
+            interface=interface,
+            ip=ip,
+            ip6=ip6,
+            hostname=hostname,
+            network_request=network_request,
+        )
         if mac is not None:
             return MacAddress(mac)
         return None
@@ -153,7 +162,7 @@ class MacAddress:
         pass
 
     def __hash__(self):
-        pass # TODO
+        pass  # TODO
 
     # dunder methods
     def __eq__(self, other):
@@ -169,4 +178,4 @@ class MacAddress:
         return f'MacAddress("{self.mac}")'
 
 
-__all__ = ['MacAddress', 'MacAddressException']
+__all__ = ["MacAddress", "MacAddressException"]
