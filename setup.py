@@ -2,7 +2,7 @@
 
 from setuptools import setup
 
-from macaddress.macaddress import __version__
+from macaddress import __version__
 
 
 # Build the page that will be displayed on PyPI from the README and CHANGELOG
@@ -31,9 +31,8 @@ setup(
     zip_safe=True,
     python_requires='>=3.6',
     keywords=[
-        'macaddress', 'get-mac', 'macaddress', 'mac-address', 'mac'
-        'ethernet', 'mac-48', 'networking', 'network',
-        'networking', 'layer2', 'layer-2', '802.3'
+        'mac', 'mac-48', 'macaddress', 'mac-address', 'get-mac', 'getmac',
+        'ethernet', 'networking', 'network', 'layer2', 'layer-2', '802.3',
     ],
     install_requires=[
         'getmac',
@@ -52,7 +51,7 @@ setup(
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
-        'Programming Language :: Python :: Implementation :: CPython',
+        'Programming Language :: Python :: 3.8',
 
         'Intended Audience :: Developers',
         'Intended Audience :: System Administrators',

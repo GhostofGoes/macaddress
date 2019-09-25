@@ -1,10 +1,12 @@
 
+**WORK IN PROGRESS - NOT YET STABLE**
+
 Modern Pythonic interface for working with MAC addresses. It provides 
 object-oriented facilities for address discovery, parsing, and validation.
 
 
 ## Installation
-Stable release from PyPI
+**NOT YET RELEASED** Stable release from PyPI
 
 ```bash
 pip install macaddress
@@ -38,12 +40,12 @@ so in a [GitHub Gist](https://gist.github.com/GhostofGoes/0a8e82930e75afcefbd879
 
 ## Python examples
 ```python
-
+# TODO
 ```
 
 ## Terminal examples
 ```bash
-
+TODO
 ```
 
 ## Background and history
@@ -75,23 +77,6 @@ to ask questions or discuss the project (Handle: @KnownError).
 
 ### Contributors
 * Christopher Goes (@ghostofgoes) - Author and maintainer
-* Calvin Tran (@cyberhobbes) - Windows interface detection improvements
-* Izra Faturrahman (@Frizz925) - Unit tests using the platform samples
-* Jose Gonzalez (@Komish) - Docker container and Docker testing
-* @fortunate-man - Awesome usage videos (`getmac`)
-* @martmists - legacy Python compatibility improvements
-* @hargoniX - scripts and specfiles for RPM packaging
-
-## Sources
-Many of the methods used to acquire an address and the core logic framework
-are attributed to the CPython project's UUID implementation.
-* https://github.com/python/cpython/blob/master/Lib/uuid.py
-* https://github.com/python/cpython/blob/2.7/Lib/uuid.py
-
-### Other notable sources
-* [_unix_fcntl_by_interface](https://stackoverflow.com/a/4789267/2214380)
-* [_windows_get_remote_mac_ctypes](goo.gl/ymhZ9p)
-* [String joining](https://stackoverflow.com/a/3258612/2214380)
 
 ## License
 MIT. Feel free to copy, modify, and use to your heart's content.
